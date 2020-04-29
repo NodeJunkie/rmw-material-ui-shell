@@ -4,19 +4,10 @@ import { injectIntl } from 'react-intl'
 import { compose } from 'redux'
 import Page from 'material-ui-shell/lib/containers/Page/Page'
 import React, { useState } from 'react'
-import Avatar from '@material-ui/core/Avatar';
-import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import TextField from '@material-ui/core/TextField';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import Link from '@material-ui/core/Link';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -38,10 +29,10 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+}))
 
 const SignIn = ({ history, intl }) => {
-  const classes = useStyles();
+  const classes = useStyles()
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -90,7 +81,7 @@ const SignIn = ({ history, intl }) => {
           <form className={classes.form} onSubmit={handleSubmit} noValidate>
             <TextField
               value={username}
-              onInput={e => setUsername(e.target.value)}
+              onInput={(e) => setUsername(e.target.value)}
               variant="outlined"
               margin="normal"
               required
@@ -103,7 +94,7 @@ const SignIn = ({ history, intl }) => {
             />
             <TextField
               value={password}
-              onInput={e => setPassword(e.target.value)}
+              onInput={(e) => setPassword(e.target.value)}
               variant="outlined"
               margin="normal"
               required
@@ -123,7 +114,6 @@ const SignIn = ({ history, intl }) => {
             >
               {intl.formatMessage({ id: 'sign_in' })}
             </Button>
-
           </form>
         </div>
       </div>
